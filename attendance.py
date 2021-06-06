@@ -403,8 +403,8 @@ def start_exam():
                 cv2.imshow('EXAM', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 print("The test was forcibly terminated by the administrator.")
-                client = Client("AC97c237318a9b897aa14ba77982dabc3d",
-                                "d37386a62f0205fa472fa20562ee4ae7v")
+                client = Client("",
+                                "")
                 # change the "from_" number to your Twilio number and the "to" number
                 # to the phone number you signed up for Twilio with, or upgrade your
                 # account to send SMS to any phone number
@@ -412,21 +412,21 @@ def start_exam():
                 msg = name + " has been caught cheating" + \
                     smsofsus(yellocard, redcard)
                 client.messages.create(
-                    to="+919167198250", from_="+16196333974", body=msg)
+                    to="", from_="", body=msg)
                 PrintResult(yellocard, redcard)
                 Fail(timee, redcard)
                 break
             elif time.time() > max_time_end:
                 print(timee, "Minute's test has ended.")
-                client = Client("AC97c237318a9b897aa14ba77982dabc3d",
-                                "714f4c5df9bb494012b4a3e1b9e0b720")
+                client = Client("",
+                                "")
                 # change the "from_" number to your Twilio number and the "to" number
                 # to the phone number you signed up for Twilio with, or upgrade your
                 # account to send SMS to any phone number
                 name = (txt2.get())
                 msg = name + " has been caught cheating"
                 client.messages.create(
-                    to="+919167198250", from_="+16196333974", body=msg)
+                    to="", from_="", body=msg)
                 PrintResult(yellocard, redcard)
                 Fail(timee, redcard)
                 break
